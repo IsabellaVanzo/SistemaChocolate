@@ -17,15 +17,15 @@
   background-color: rgb(0, 0, 0);
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
+  
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
   margin: 1% auto;
-  /* 15% from the top and centered */
-  padding: 20px;
+  margin-left: 20% !important;
+  padding: 40px;
   border: 1px solid #888;
   width: 80%;
   /* Could be more or less, depending on screen size */
@@ -57,16 +57,19 @@ table {
 th {
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
-  padding: 12px 16px;
+  padding: 1px 2px;
   text-align: left;
   font-weight: bold;
+  font-size: 12px;
   color: #212529;
 }
 
 /* Estilo para as células da tabela */
 td {
   border: 1px solid #dee2e6;
-  padding: 12px 16px;
+  padding: 2px 6px;
+  font-size: 12px;
+
 }
 
 /* Estilo para as células da tabela quando passa o mouse */
@@ -103,7 +106,8 @@ button:hover {
 .clientesform .form-group {
   margin-bottom: 15px;
   margin-left: 8px;
-  flex-basis: calc(50% - 10px); /* 50% menos a margem entre as colunas */
+  flex-basis: calc(50% - 10px);
+  /* 50% menos a margem entre as colunas */
 }
 
 .clientesform label {
@@ -135,6 +139,7 @@ button:hover {
 .clientesform button[type="submit"]:hover {
   background-color: #000000 !important;
 }
+
 /* Estilos para o select */
 .clientesform select {
   width: 100%;
@@ -143,7 +148,8 @@ button:hover {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
-  appearance: none; /* Remove a aparência padrão do sistema operacional */
+  appearance: none;
+  /* Remove a aparência padrão do sistema operacional */
   background-repeat: no-repeat;
   background-position: right 10px center;
 }
@@ -158,7 +164,8 @@ button:hover {
 
 .clientesform select:focus {
   outline: none;
-  border-color: #aa0000; /* Cor da borda ao focar */
+  border-color: #aa0000;
+  /* Cor da borda ao focar */
 }
 
 /* Estilos para as opções do select */
@@ -166,6 +173,7 @@ button:hover {
   background-color: #fff;
   color: #000;
 }
+
 /* Estilos para o formulário de cadastro de login */
 .cadastroLoginForm {
   max-width: 600px;
@@ -175,12 +183,15 @@ button:hover {
   border-radius: 8px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Distribui os elementos igualmente */
+  justify-content: space-between;
+  /* Distribui os elementos igualmente */
 }
 
 .cadastroLoginForm .form-group {
-  flex-basis: calc(50% - 10px); /* Largura de 50% menos a margem */
-  margin-bottom: 20px; /* Espaço abaixo */
+  flex-basis: calc(50% - 10px);
+  /* Largura de 50% menos a margem */
+  margin-bottom: 20px;
+  /* Espaço abaixo */
 }
 
 .cadastroLoginForm .form-label {
@@ -190,7 +201,8 @@ button:hover {
 }
 
 .cadastroLoginForm .form-control {
-  width: 100%; /* Largura total */
+  width: 100%;
+  /* Largura total */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -211,6 +223,7 @@ button:hover {
 .cadastroLoginForm .form-button:hover {
   background-color: #000000;
 }
+
 /* Estilos para o formulário de cadastro de produtos */
 .cadastroProdutosForm {
   max-width: 600px;
@@ -220,12 +233,15 @@ button:hover {
   border-radius: 8px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Distribui os elementos igualmente */
+  justify-content: space-between;
+  /* Distribui os elementos igualmente */
 }
 
 .cadastroProdutosForm .form-group {
-  flex-basis: calc(50% - 10px); /* Largura de 50% menos a margem */
-  margin-bottom: 20px; /* Espaço abaixo */
+  flex-basis: calc(50% - 10px);
+  /* Largura de 50% menos a margem */
+  margin-bottom: 20px;
+  /* Espaço abaixo */
 }
 
 .cadastroProdutosForm .form-label {
@@ -235,7 +251,8 @@ button:hover {
 }
 
 .cadastroProdutosForm .form-control {
-  width: 100%; /* Largura total */
+  width: 100%;
+  /* Largura total */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -256,6 +273,7 @@ button:hover {
 .cadastroProdutosForm .form-button:hover {
   background-color: #000000;
 }
+
 /* Estilos para o formulário de cadastro de fornecedores */
 .cadastroFornecedoresForm {
   max-width: 600px;
@@ -265,12 +283,15 @@ button:hover {
   border-radius: 8px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Distribui os elementos igualmente */
+  justify-content: space-between;
+  /* Distribui os elementos igualmente */
 }
 
 .cadastroFornecedoresForm .form-group {
-  flex-basis: calc(50% - 10px); /* Largura de 50% menos a margem */
-  margin-bottom: 20px; /* Espaço abaixo */
+  flex-basis: calc(50% - 10px);
+  /* Largura de 50% menos a margem */
+  margin-bottom: 20px;
+  /* Espaço abaixo */
 }
 
 .cadastroFornecedoresForm .form-label {
@@ -280,7 +301,8 @@ button:hover {
 }
 
 .cadastroFornecedoresForm .form-control {
-  width: 100%; /* Largura total */
+  width: 100%;
+  /* Largura total */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -348,6 +370,7 @@ button:hover {
 .cadastroClientesForm .form-button:hover {
   background-color: #000;
 }
+
 .controleEstoqueForm {
   max-width: 600px;
   margin: 0 auto;
@@ -391,6 +414,7 @@ button:hover {
 .controleEstoqueForm .form-button:hover {
   background-color: #000;
 }
+
 .registroVendasForm {
   max-width: 600px;
   margin: 0 auto;
@@ -434,5 +458,3 @@ button:hover {
 .registroVendasForm .form-button:hover {
   background-color: #000;
 }
-
-

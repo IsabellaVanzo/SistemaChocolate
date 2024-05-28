@@ -12,7 +12,7 @@ import CadastroProdutos from "./Pages/CadastroProdutos";
 import ContasAPagar from "./Pages/ContasAPagar";
 import ContasAReceber from "./Pages/ContasAReceber";
 import RegistroVendas from "./Pages/RegistroVendas";
-import TabelaAutenticacao from "./Components/TabelaAutenticacao";
+import DashboardListaLogin from "./Pages/ListaLogin";
 
 const Rotas = () => {
   return (
@@ -30,7 +30,7 @@ const Rotas = () => {
         <Route path="/contasAPagar" element={<ContasAPagar />} />
         <Route path="/contasAReceber" element={<ContasAReceber />} />
         <Route path="/registroVendas" element={<RegistroVendas />} />
-        <Route path="/listaLogin" element={<TabelaAutenticacao />} />
+        <Route path="/listaLogin" element={<DashboardListaLogin />} />
       </Routes>
     </>
   );

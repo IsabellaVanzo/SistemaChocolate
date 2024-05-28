@@ -32,8 +32,6 @@ import { BiSolidDoughnutChart } from "react-icons/bi";
 import { GiShoppingBag } from "react-icons/gi";
 import { RiDashboardFill } from "react-icons/ri";
 
-import ContasAReceber from "../Pages/ContasAReceber.js";
-
 const avatars = [User, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8]; 
 const notifications = [
     { id: 1, message: 'Atualização'},
@@ -210,7 +208,7 @@ function Dashboard() {
                 <main>
                     <div className="head-title">
                         <div className="left">
-                            <h1>Dashboard</h1>
+                            <h1>Sistema Garoto</h1>
                             <ul className="breadcrumb">
                                 <li>
                                     <a href="#">Dashboard</a>
@@ -333,9 +331,6 @@ function Dashboard() {
                                 <HiOutlinePlusSmall />
                                 <IoFilterOutline />
                             </div>
-                            <ul className="todo-list">
-                                <ContasAReceber />
-                            </ul>
                         </div>
 
                     </div>

@@ -179,10 +179,8 @@ body {
     align-items: center;
     grid-gap: 24px;
     font-family: var(--lato);
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    position: relative;
+    margin-top: -20px;
 }
 
 #content nav::before {
@@ -595,7 +593,7 @@ body {
     position: relative;
     cursor: pointer;
 }
-  
+
 
 .notifications {
     position: absolute;
