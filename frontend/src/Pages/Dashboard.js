@@ -17,7 +17,6 @@ import avatar8 from "../images/avatar-8.avif";
 
 import { LuMoreVertical } from "react-icons/lu";
 import { IoFilterOutline } from "react-icons/io5";
-import { HiOutlinePlusSmall } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { BiSolidGroup } from "react-icons/bi";
@@ -25,14 +24,14 @@ import { FaCalendarCheck } from "react-icons/fa6";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { FaBell } from "react-icons/fa";
-import { BiSolidCog } from "react-icons/bi";
 import { CiLogout } from "react-icons/ci";
 import { BiSolidMessageDots } from "react-icons/bi";
 import { BiSolidDoughnutChart } from "react-icons/bi";
 import { GiShoppingBag } from "react-icons/gi";
 import { RiDashboardFill } from "react-icons/ri";
 
-import ContasAReceber from "../Pages/ContasAReceber.js";
+import Grafico from "../Pages/Grafico.js";
+import HistoricoClientes from "../Pages/HistoricoClientes.js";
 
 const avatars = [User, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8]; 
 const notifications = [
@@ -146,12 +145,6 @@ function Dashboard() {
                 </ul>
                 <ul className="side-menu">
                     <li>
-                        <a href="#">
-                            <BiSolidCog />
-                            <span className="text">Settings</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="/" className="logout">
                             <CiLogout />
                             <span className="text">Logout</span>
@@ -223,7 +216,7 @@ function Dashboard() {
                         </div>
                         <a href="#" className="btn-download">
                             <FaCloudDownloadAlt />
-                            <span className="text">Download PDF</span>
+                            <span className="text">Baixar Dados Brutos</span>
                         </a>
                     </div>
 
@@ -231,22 +224,22 @@ function Dashboard() {
                         <li>
                             <FaCalendarCheck />
                             <span className="text">
-                                <h3>1020</h3>
-                                <p>New Order</p>
+                                <h3>28/05</h3>
+                                <p>Calendário</p>
                             </span>
                         </li>
                         <li>
                             <BiSolidGroup />
                             <span className="text">
-                                <h3>2834</h3>
-                                <p>Visitors</p>
+                                <h3>130 mil</h3>
+                                <p>Funcionários</p>
                             </span>
                         </li>
                         <li>
                             <AiFillDollarCircle />
                             <span className="text">
-                                <h3>$2543</h3>
-                                <p>Total Sales</p>
+                                <h3>$1498000</h3>
+                                <p>Vendas Mensais</p>
                             </span>
                         </li>
                     </ul>
@@ -258,83 +251,37 @@ function Dashboard() {
                                 <IoIosSearch />
                                 <IoFilterOutline />
                             </div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>User</th>
-                                        <th>Date Order</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <img src={User} alt="User" />
-                                            <p>John Doe</p>
-                                        </td>
-                                        <td>01-10-2021</td>
-                                        <td><span className="status completed">Completed</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src={User} alt="User" />
-                                            <p>John Doe</p>
-                                        </td>
-                                        <td>01-10-2021</td>
-                                        <td><span className="status completed">Completed</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src={User} alt="User" />
-                                            <p>John Doe</p>
-                                        </td>
-                                        <td>01-10-2021</td>
-                                        <td><span className="status completed">Completed</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src={User} alt="User" />
-                                            <p>John Doe</p>
-                                        </td>
-                                        <td>01-10-2021</td>
-                                        <td><span className="status completed">Completed</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <HistoricoClientes />
                         </div>
                         <div className="todo">
                             <div className="head">
-                                <h3>Todos</h3>
-                                <HiOutlinePlusSmall />
-                                <IoFilterOutline />
+                                <h3>Tarefas ✔</h3>
                             </div>
                             <ul className="todo-list">
                                 <li className="completed">
-                                    <p>Todo List</p>
+                                    <p>Verificar Estoque</p>
                                     <LuMoreVertical />
                                 </li>
                                 <li className="completed">
-                                    <p>Todo List</p>
+                                    <p>Campanhas Marketing</p>
                                     <LuMoreVertical />
                                 </li>
                                 <li className="completed">
-                                    <p>Todo List</p>
+                                    <p>Analisar Relatórios</p>
                                     <LuMoreVertical />
                                 </li>
                                 <li className="completed">
-                                    <p>Todo List</p>
+                                    <p>Desenvolver Sabores</p>
                                     <LuMoreVertical />
                                 </li>
                             </ul>
                         </div>
                         <div className="todo">
                             <div className="head">
-                                <h3>Tabela com Modal</h3>
-                                <HiOutlinePlusSmall />
-                                <IoFilterOutline />
+                                <h3>Controle de Vendas</h3>
                             </div>
                             <ul className="todo-list">
-                                <ContasAReceber />
+                                <Grafico />
                             </ul>
                         </div>
 
