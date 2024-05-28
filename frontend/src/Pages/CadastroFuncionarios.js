@@ -35,142 +35,143 @@ import { BiSolidMessageDots } from "react-icons/bi";
 import { BiSolidDoughnutChart } from "react-icons/bi";
 import { GiShoppingBag } from "react-icons/gi";
 import { RiDashboardFill } from "react-icons/ri";
+import { AiFillHdd } from "react-icons/ai";
+import { FaPeopleCarry } from "react-icons/fa";
+import { GiMoneyStack } from "react-icons/gi";
+import { FaPeopleLine } from "react-icons/fa6";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { GiReceiveMoney } from "react-icons/gi";
+import { FaClipboardList } from "react-icons/fa";
 
+import ContasAReceber from "../Pages/ContasAReceber.js"
+import Grafico from "../Pages/Grafico.js";
+import TabelaHistoricoClientes from '../Components/TabelaHistoricoClientes';
 const avatars = [User, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8];
 const notifications = [
-  { id: 1, message: 'Atualização' },
-  { id: 2, message: 'Lembrete Reunião' },
-  { id: 3, message: 'Feedback' },
-  { id: 4, message: 'Alerta Segurança ' },
-  { id: 5, message: 'Notificação Tarefa' },
+    { id: 1, message: 'Atualização' },
+    { id: 2, message: 'Lembrete Reunião' },
+    { id: 3, message: 'Feedback' },
+    { id: 4, message: 'Alerta Segurança ' },
+    { id: 5, message: 'Notificação Tarefa' },
 ];
 
-
-
 function DashboardCadastroFuncionarios() {
-  const [showAvatarDropdown, setShowAvatarDropdown] = useState(false);
-  const [selectedAvatar, setSelectedAvatar] = useState(User);
-  const [showNotificationsDropdown, setShowNotificationsDropdown] = useState(false);
+    const [showAvatarDropdown, setShowAvatarDropdown] = useState(false);
+    const [selectedAvatar, setSelectedAvatar] = useState(User);
+    const [showNotificationsDropdown, setShowNotificationsDropdown] = useState(false);
 
-  useEffect(() => {
-    initializeSidebar();
-  }, []);
+    useEffect(() => {
+        initializeSidebar();
+    }, []);
 
-  const handleAvatarClick = () => {
-    setShowAvatarDropdown(!showAvatarDropdown);
-  };
+    const handleAvatarClick = () => {
+        setShowAvatarDropdown(!showAvatarDropdown);
+    };
 
-  const handleAvatarSelect = (avatar) => {
-    setSelectedAvatar(avatar);
-    setShowAvatarDropdown(false);
-  };
+    const handleAvatarSelect = (avatar) => {
+        setSelectedAvatar(avatar);
+        setShowAvatarDropdown(false);
+    };
 
-  const handleNotificationClick = () => {
-    setShowNotificationsDropdown(!showNotificationsDropdown);
-  };
-  const loadModalScript = async () => {
-    try {
-      const module = await import('../data/jsModal.js');
-      module.default();
-    } catch (error) {
-      console.error("Failed to load modal script:", error);
-    }
-  };
-  loadModalScript();
-  return (
-    <div>
+    const handleNotificationClick = () => {
+        setShowNotificationsDropdown(!showNotificationsDropdown);
+    };
 
-      <section id="sidebar">
-        <img className="brand" src={logoGaroto} />
-        <ul className="side-menu top">
-          <li className="active">
-            <Link to="/">
-              <RiDashboardFill />
-              <span className="text">Dashboard</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/cadastroLogin">
-              <GiShoppingBag />
-              <span className="text">cadastroLogin</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/cadastroProdutos">
-              <BiSolidDoughnutChart />
-              <span className="text">cadastroProdutos</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/cadastroFornecedores">
-              <BiSolidMessageDots />
-              <span className="text">cadastroFornecedores</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/historicoClientes">
-              <BiSolidGroup />
-              <span className="text">historicoClientes</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/cadastroClientes">
-              <BiSolidGroup />
-              <span className="text">cadastroClientes</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/controleEstoque">
-              <BiSolidGroup />
-              <span className="text">controleEstoque</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/registroVendas">
-              <BiSolidGroup />
-              <span className="text">registroVendas</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/cadastroFuncionarios">
-              <BiSolidGroup />
-              <span className="text">cadastroFuncionarios</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/contasAPagar">
-              <BiSolidGroup />
-              <span className="text">contasAPagar</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/contasAReceber">
-              <BiSolidGroup />
-              <span className="text">contasAReceber</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/listaLogin">
-              <BiSolidGroup />
-              <span className="text">listaLogin</span>
-            </Link>
-          </li>
-        </ul>
-        <ul className="side-menu">
-          <li>
-            <a href="#">
-              <BiSolidCog />
-              <span className="text">Settings</span>
-            </a>
-          </li>
-          <li>
-            <a href="/" className="logout">
-              <CiLogout />
-              <span className="text">Logout</span>
-            </a>
-          </li>
-        </ul>
-      </section>
+    return (
+        <div>
+
+            <section id="sidebar">
+                <img className="brand" src={logoGaroto} />
+                <ul className="side-menu top">
+                    <li className="active">
+                        <Link to="/">
+                            <RiDashboardFill />
+                            <span className="text">Painel</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/cadastroLogin">
+                            <GiShoppingBag />
+                            <span className="text">Cadastro de Login</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/cadastroProdutos">
+                            <BiSolidDoughnutChart />
+                            <span className="text">Cadastro de Produtos</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/cadastroFornecedores">
+                            <BiSolidMessageDots />
+                            <span className="text">Cadastro de Fornecedores</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/historicoClientes">
+                            <AiFillHdd />
+                            <span className="text">Historico de Clientes</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/cadastroClientes">
+                            <BiSolidGroup />
+                            <span className="text">Cadastro de Clientes</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/controleEstoque">
+                            <FaPeopleCarry />
+                            <span className="text">Controle de Estoque</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/registroVendas">
+                            <GiMoneyStack />
+                            <span className="text">Registro de Vendas</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/cadastroFuncionarios">
+                            <FaPeopleLine />
+                            <span className="text">Cadastro de Funcionarios</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/contasAPagar">
+                            <GiTakeMyMoney />
+                            <span className="text">Contas a Pagar</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/contasAReceber">
+                            <GiReceiveMoney />
+                            <span className="text">Contas a Receber</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/listaLogin">
+                            <FaClipboardList />
+                            <span className="text">Lista de Login</span>
+                        </Link>
+                    </li>
+                </ul>
+                <ul className="side-menu">
+                    <li>
+                        <a href="#">
+                            <BiSolidCog />
+                            <span className="text">Configurações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" className="logout">
+                            <CiLogout />
+                            <span className="text">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
 
 
       <section id="content">

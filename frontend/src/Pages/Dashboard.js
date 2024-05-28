@@ -17,6 +17,7 @@ import avatar8 from "../images/avatar-8.avif";
 
 import { LuMoreVertical } from "react-icons/lu";
 import { IoFilterOutline } from "react-icons/io5";
+import { HiOutlinePlusSmall } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { BiSolidGroup } from "react-icons/bi";
@@ -24,12 +25,23 @@ import { FaCalendarCheck } from "react-icons/fa6";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { FaBell } from "react-icons/fa";
+import { BiSolidCog } from "react-icons/bi";
 import { CiLogout } from "react-icons/ci";
 import { BiSolidMessageDots } from "react-icons/bi";
 import { BiSolidDoughnutChart } from "react-icons/bi";
 import { GiShoppingBag } from "react-icons/gi";
 import { RiDashboardFill } from "react-icons/ri";
+import { AiFillHdd } from "react-icons/ai";
+import { FaPeopleCarry } from "react-icons/fa";
+import { GiMoneyStack } from "react-icons/gi";
+import { FaPeopleLine } from "react-icons/fa6";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { GiReceiveMoney } from "react-icons/gi";
+import { FaClipboardList } from "react-icons/fa";
+
+import ContasAReceber from "../Pages/ContasAReceber.js"
 import Grafico from "../Pages/Grafico.js";
+import TabelaHistoricoClientes from '../Components/TabelaHistoricoClientes';
 const avatars = [User, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8];
 const notifications = [
     { id: 1, message: 'Atualização' },
@@ -70,81 +82,87 @@ function Dashboard() {
                     <li className="active">
                         <Link to="/">
                             <RiDashboardFill />
-                            <span className="text">Dashboard</span>
+                            <span className="text">Painel</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/cadastroLogin">
                             <GiShoppingBag />
-                            <span className="text">cadastroLogin</span>
+                            <span className="text">Cadastro de Login</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/cadastroProdutos">
                             <BiSolidDoughnutChart />
-                            <span className="text">cadastroProdutos</span>
+                            <span className="text">Cadastro de Produtos</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/cadastroFornecedores">
                             <BiSolidMessageDots />
-                            <span className="text">cadastroFornecedores</span>
+                            <span className="text">Cadastro de Fornecedores</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/historicoClientes">
-                            <BiSolidGroup />
-                            <span className="text">historicoClientes</span>
+                            <AiFillHdd />
+                            <span className="text">Historico de Clientes</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/cadastroClientes">
                             <BiSolidGroup />
-                            <span className="text">cadastroClientes</span>
+                            <span className="text">Cadastro de Clientes</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/controleEstoque">
-                            <BiSolidGroup />
-                            <span className="text">controleEstoque</span>
+                            <FaPeopleCarry />
+                            <span className="text">Controle de Estoque</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/registroVendas">
-                            <BiSolidGroup />
-                            <span className="text">registroVendas</span>
+                            <GiMoneyStack />
+                            <span className="text">Registro de Vendas</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/cadastroFuncionarios">
-                            <BiSolidGroup />
-                            <span className="text">cadastroFuncionarios</span>
+                            <FaPeopleLine />
+                            <span className="text">Cadastro de Funcionarios</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/contasAPagar">
-                            <BiSolidGroup />
-                            <span className="text">contasAPagar</span>
+                            <GiTakeMyMoney />
+                            <span className="text">Contas a Pagar</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/contasAReceber">
-                            <BiSolidGroup />
-                            <span className="text">contasAReceber</span>
+                            <GiReceiveMoney />
+                            <span className="text">Contas a Receber</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/listaLogin">
-                            <BiSolidGroup />
-                            <span className="text">listaLogin</span>
+                            <FaClipboardList />
+                            <span className="text">Lista de Login</span>
                         </Link>
                     </li>
                 </ul>
                 <ul className="side-menu">
                     <li>
+                        <a href="#">
+                            <BiSolidCog />
+                            <span className="text">Configurações</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="/" className="logout">
                             <CiLogout />
-                            <span className="text">Logout</span>
+                            <span className="text">Sair</span>
                         </a>
                     </li>
                 </ul>
@@ -248,7 +266,8 @@ function Dashboard() {
                                 <IoIosSearch />
                                 <IoFilterOutline />
                             </div>
-                            <HistoricoClientes />
+                            <Grafico />
+
                         </div>
                         <div className="todo">
                             <div className="head">
@@ -278,7 +297,7 @@ function Dashboard() {
                                 <h3>Controle de Vendas</h3>
                             </div>
                             <ul className="todo-list">
-                                <Grafico />
+                                <TabelaHistoricoClientes />
                             </ul>
                         </div>
 
