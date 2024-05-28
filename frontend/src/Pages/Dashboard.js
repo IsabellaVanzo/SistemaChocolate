@@ -72,6 +72,15 @@ function Dashboard() {
     const handleNotificationClick = () => {
         setShowNotificationsDropdown(!showNotificationsDropdown);
     };
+    const loadModalScript = async () => {
+        try {
+          const module = await import('../data/jsModal.js');
+          module.default();
+        } catch (error) {
+          console.error("Failed to load modal script:", error);
+        }
+      };
+      loadModalScript();
 
     return (
         <div>
